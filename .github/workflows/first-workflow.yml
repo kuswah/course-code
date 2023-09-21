@@ -12,3 +12,16 @@ jobs:
         run: |
           node -v
           npm -v 
+  Parallel-Job-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Display Software Version
+        run: sw_vers
+  dependant-job: 
+    runs-on: windows-latest
+    needs: run-shell-commands
+    steps: 
+      -name: echo a string
+       run: write-output "Dinesh WINDOWS
+      -name: Error Step
+       run: doesnotexit      

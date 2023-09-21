@@ -22,6 +22,6 @@ jobs:
     needs: run-shell-commands
     steps: 
       -name: echo a string
-       run: write-output "Dinesh WINDOWS
+       run: write-output "Dinesh WINDOWS"
       -name: Error Step
        run: doesnotexit      

@@ -21,7 +21,8 @@ jobs:
     runs-on: windows-latest
     needs: run-shell-commands
     steps: 
-      -name: echo a string
-       run: write-output "Dinesh WINDOWS"
-      -name: Error Step
-       run: doesnotexit      
+      - name: echo a string1
+        run: Write-Output "Dinesh WINDOWS"
+       
+      - name: Error Step
+        run: doesnotexit      

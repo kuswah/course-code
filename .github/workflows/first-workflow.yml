@@ -25,4 +25,4 @@ jobs:
         run: Write-Output "Dinesh WINDOWS"
        
       - name: Error Step
-        run: doesnotexit      
+        run: doesnotexits      

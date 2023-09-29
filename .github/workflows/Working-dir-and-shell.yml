@@ -1,0 +1,13 @@
+name: Display Working Directory
+on: [push]
+jobs:
+  display-wd-info:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Display Working Directory and list file
+          run: |
+            pwd
+            ls -a
+            echo $GITHUB_SHA
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE  

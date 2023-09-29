@@ -6,4 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setting an error message
-        run: echo "::error::Missing Semicolon" 
+        run: echo "::error::Missing Semicolon"
+
+      - name: Group of Logs
+        run: |
+          echo "::group:: My Group Titile"
+          echo "Inside Group"
+          echo "::endgroup::"
+      - name: Masking a Value
+        run: echo "::add-mask::Secret String"
+
+      - name: Echo a secret
+        run: echo "Secret String"

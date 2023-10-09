@@ -1,0 +1,15 @@
+name: test-workflow
+on: [push]
+
+jobs:
+  simple-shell-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run a shell command
+        run: pwd
+
+      - name: echo a string
+        run: |
+          ls
+          npm -v   
+        

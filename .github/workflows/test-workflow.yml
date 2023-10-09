@@ -1,6 +1,7 @@
 name: test-workflow
 on: [push]
 
+
 jobs:
   simple-shell-job:
     runs-on: ubuntu-latest
@@ -11,5 +12,11 @@ jobs:
       - name: echo a string
         run: |
           ls
-          npm -v   
+          npm -v  
+          
+  Dependent-Job:
+    runs-on: windows-latest
+    steps:
+      - name: echo Output on Windows
+        run: Write-Output "From Windows"  
         

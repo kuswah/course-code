@@ -19,5 +19,5 @@ jobs:
     needs: simple-shell-job
     steps:
       - name: echo Output on Windows
-        run: Write-Output "From Windows"  
+        run: Write-Output "From DINESH"  
         

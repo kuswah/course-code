@@ -12,4 +12,5 @@ jobs:
       - run: |
           echo $GITHUB_SHA
           echo $GITHUB_REF
+          echo "This is Feature"
       - uses: actions/checkout@v4

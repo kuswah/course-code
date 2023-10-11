@@ -6,7 +6,7 @@ on:
 
 jobs:
   echo-string:
-  runs-on: ubuntu-latest
-    steps:
-      - run: echo " I Was triggered because of 'Repository Events' Completed"
+   runs-on: ubuntu-latest
+   steps:
+     - run: echo " I Was triggered because of 'Repository Events' Completed"
      

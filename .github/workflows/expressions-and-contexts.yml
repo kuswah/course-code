@@ -16,7 +16,7 @@ jobs:
           echo ${{ 'string' == 'String' }}
           echo ${{ true && false }}
           echo ${{ true || (false && true) }}
-      - name: Dump Contexts
+      - name: Dump Contexts1
         run: |
           echo '${{ toJson(github) }}'
           echo '${{ toJson(job) }}'

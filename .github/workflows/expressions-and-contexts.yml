@@ -2,7 +2,16 @@ name: Expressions & Contexts
 on: [push, pull_request, issues, workflow_dispatch]
 run-name: "Expressions & Contexts by @${{ github.actor }}, event: ${{ github.event_name }}"
 jobs:
+  runs-on-issues-prs:
+    runs-on: ubuntu-latest
+    if: contains(fromJson('["issues", "pull_request"]'), github.event_name )
+    steps:
+      - name: run only issue has a big label
+        if: contains(github.event.issue.labels.*.name, 'bug')
+        run: echo ${{join(github.event.issue.labels.*.name, ',')}}
+  
   using-expressions-and-contexts:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Expressions

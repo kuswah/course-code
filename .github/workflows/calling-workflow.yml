@@ -9,7 +9,7 @@ on:
         required: false
 jobs:
   calling-a-reusable-wf:
-    uses: kuswah/workflow/.github/workflow/called-workflow.yml@main
+    uses: kuswah/workflow/.github/workflows/called-workflow.yml@main
     with:
       name: ${{ inputs.name }}
     secrets:

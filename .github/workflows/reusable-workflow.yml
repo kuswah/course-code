@@ -6,6 +6,6 @@ jobs:
   generate-output:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "date=$(date)" >> $GITHUB_OUTPUT
+      - run: echo "date=$(date)"
         id: date-step
       - run: echo $GITHUB_OUTPUT

@@ -8,3 +8,4 @@ jobs:
     steps:
       - run: echo "date=$(date)" >> $GITHUB_OUTPUT
         id: date-step
+      - run: echo $GITHUB_OUTPUT

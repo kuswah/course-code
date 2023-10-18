@@ -1,0 +1,10 @@
+name: Reusable Workflow
+on:
+  workflow_dispatch:
+    
+jobs:
+  generate-output:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "date=$(date)" >> $GITHUB_OUTPUT
+      - run: echo $GITHUB_OUTPUT

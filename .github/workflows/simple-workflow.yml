@@ -12,7 +12,8 @@ jobs:
 
   second-job:
     runs-on: ubuntu-latest
-    steps:   
+    steps: 
+    - uses: actions/checkout@v4      
     - name: Read File                   #Third Step#
       run: cat README.md  
       

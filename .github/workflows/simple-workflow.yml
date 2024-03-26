@@ -10,7 +10,9 @@ jobs:
     - name: List Files                  #Second Step#
       run: ls
 
-  second-job:   
+  second-job:
+    runs-on: ubuntu-latest
+    steps:   
     - name: Read File                   #Third Step#
       run: cat README.md  
       

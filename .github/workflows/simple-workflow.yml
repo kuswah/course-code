@@ -1,19 +1,29 @@
 name: simple workflow
 on: [push]
 
-jobs: 
-  first-job: 
-    runs-on: ubuntu-latest
-    steps: 
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v4     
     - name: Welcome message             #First Step#
       run: echo "My First GitHub Action"
-    - name: List Files                  #Second Step#
-      run: ls
-
+ 
   second-job:
     runs-on: ubuntu-latest
+    needs: [first-job]
+    steps: 
+    - name: Checkout Job    
+      uses: actions/checkout@v4      
+    - name: List File                   #Third Step#
+      run: ls
+      
+  Third-job:
+    runs-on: ubuntu-latest
+    needs: [second-job]
     steps: 
     - uses: actions/checkout@v4      
     - name: Read File                   #Third Step#
-      run: cat README.md  
+      run: cat README.md
       

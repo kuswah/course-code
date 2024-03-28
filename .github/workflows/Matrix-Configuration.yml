@@ -14,7 +14,7 @@ jobs:
       run: docker run hello-world 
       
   deploy-on-windows:
-    runs-on: window-latest
+    runs-on: windows-latest
     steps:
     - name: Docker Details
       run: docker info
